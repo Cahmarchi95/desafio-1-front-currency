@@ -1,42 +1,140 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* 
+====== 
+Variables 
+======
+*/
+:root {
+  --mainWhite: #ffffff;
+  --offWhite: #f7f7f7;
+  --mainBackground: #f1f5f8;
+  --mainOverlay: rgba(35, 10, 36, 0.4);
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+  --mainRed: #bd0303;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.3rem;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --mainBorderRadius: 0.25rem;
+  --smallWidth: 85vw;
+  --maxWidth: 40rem;
+  --fullWidth: 1170px;
 }
+/* 
+====== 
+Global Styles 
+======
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -Roboto, sans-serif;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.container {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 48px;
+  position: absolute;
+  width: 584px;
+  height: 91px;
+  left: 20px;
+  top: 35px;
+}
+
+/*Mask*/
+
+/*  width: 1350px;
+  height: 660px;
+  left: 16px;
+  top: -3px; */
+
+.mask {
+  position: absolute;
+  width: 1350px;
+  height: 660px;
+  left: 16px;
+  top: -3px;
+}
+
+/*Logo*/
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  position: absolute;
+  width: 209px;
+  height: 73px;
+  left: 0px;
+  top: 0px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.currency {
+  position: absolute;
+  width: 73px;
+  height: 21px;
+  left: 115px;
+  top: 70px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.underline {
+  position: absolute;
+  width: 83px;
+  height: 4px;
+  left: 25px;
+  top: 75px;
+  background: var(--mainBlack);
+  opacity: 0.32;
 }
 
-.card {
-  padding: 2em;
+.date {
+  width: 276px;
+  height: 50px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #45505e;
+  left: 250px;
+  top:28px;
+  bottom:0;
+  position: absolute;
 }
 
-.read-the-docs {
-  color: #888;
+.dados {
+  width: 327px;
+  height: 16px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #8c9cad;
+  left: 250px;
+  bottom: 20px;
+  position: absolute;
+
 }
