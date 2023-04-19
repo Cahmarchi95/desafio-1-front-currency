@@ -40,3 +40,32 @@ export const HourWrapper = styled.div`
     color: #8c9cad;
   }
 `;
+
+export const InputWrapper = styled.header`
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 4rem;
+  margin-left: 4rem;
+  font-weight: 500;
+  font-size: 14px;
+  color: #2e3742;
+`;
+
+export const InputBox = styled.input`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  gap: 0.6rem;
+  width: 8rem;
+  height: 2rem;
+  background: #ffffff;
+  border: 1px solid #d7e0eb;
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+`;
