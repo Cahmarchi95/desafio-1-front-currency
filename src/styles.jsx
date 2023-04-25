@@ -69,3 +69,41 @@ export const InputBox = styled.input`
   align-self: stretch;
   flex-grow: 0;
 `;
+
+export const OptionWrapper = styled.div`
+  margin-top: 2rem;
+  margin-left: 4rem;
+  p {
+    font-weight: 500;
+  }
+  font-weight: 300;
+  font-size: 14px;
+  color: #2e3742;
+`;
+export const InputOption = styled.input`
+  display: inline-block;
+  margin-top: 0.8rem;
+  margin-left: 0.2rem;
+`;
+export const InputOption1 = styled.input`
+  display: inline-block;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+`;
+export const Label = styled.label`
+  margin-left: 0.3rem;
+`;
+
+export const Converter = styled.button`
+  display: block;
+  margin-top: 2rem;
+  width: 8rem;
+  height: 3rem;
+  background-color: black;
+  color: #fff;
+  padding: 1rem;
+  order: 1px solid rgba(0, 0, 0, 0.36);
+  box-shadow: 0px 8px 4px rgba(13, 17, 27, 0.08);
+  border-radius: 8px;
+  cursor: pointer;
+`;

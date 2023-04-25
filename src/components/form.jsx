@@ -1,16 +1,9 @@
-import React, { useState } from "react";
 import { InputWrapper, InputBox } from "../styles";
+import { useGlobalContext } from "../context";
+
 function Form() {
-  const [dolar, setDolar] = useState("");
-  const [taxa, setTaxa] = useState("");
-
-  const handleChange = (event) => {
-    setDolar(event.target.value);
-  };
-
-  const handleChangeTaxa = (event) => {
-    setTaxa(event.target.value);
-  };
+  const { dolar, setDolar, taxa, setTaxa, handleChange, handleChangeTaxa } =
+    useGlobalContext();
 
   return (
     <InputWrapper>
