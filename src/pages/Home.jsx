@@ -1,13 +1,15 @@
+import styled from "styled-components";
 import Form from "../components/form";
 import { Header } from "../components/header";
 import Option from "../components/option";
+import { Background } from "../styles";
 export function Home() {
   return (
-    <div>
+    <Background>
       <Header />
       <Form />
-      <Option/>
-    </div>
+      <Option />
+    </Background>
   );
 }
 

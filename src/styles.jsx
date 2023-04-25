@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import img from "./assets/Mask.png";
 
 export const Wrapper = styled.header`
   display: flex;
@@ -106,4 +107,14 @@ export const Converter = styled.button`
   box-shadow: 0px 8px 4px rgba(13, 17, 27, 0.08);
   border-radius: 8px;
   cursor: pointer;
+`;
+
+export const Background = styled.div`
+  background-image: url(${img});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
 `;
