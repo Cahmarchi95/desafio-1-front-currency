@@ -3,26 +3,24 @@ import moment from "moment/moment";
 import "moment/locale/pt-br";
 import React from "react";
 import axios from "axios";
-axios;
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [cotacao, setCotacao] = useState([]);
+  const [cotacao, setCotacao] = useState(null);
 
-  const fetchData = async () => {
-    try {
+  useEffect(() => {
+    async function fetchDollarRate() {
       const response = await axios.get(
         "https://economia.awesomeapi.com.br/last/USD-BRL"
       );
-      const data = response.data;
-      setCotacao(data);
-      console.log(data);
-    } catch (error) {
-      console.log(error);
+      const {
+        data: {
+          USDBRL: { ask },
+        },
+      } = response;
+      setCotacao(ask);
     }
-  };
-  useEffect(() => {
-    fetchData();
+    fetchDollarRate();
   }, []);
 
   const [selectedValue, setSelectedValue] = useState("");
@@ -31,8 +29,9 @@ const AppProvider = ({ children }) => {
     setSelectedValue(event.target.value);
   };
   const handleConvertClick = () => {
-    alert(`A opção selecionada foi: ${selectedValue} o valor a ser covertido foi de:${dolar} e a taxa é de: ${taxa} e a cotação do dólar está 
+    alert(`A opção selecionada foi: ${selectedValue} o valor a ser covertido foi de:${dolar} e a taxa é de: ${taxa} e a cotação do dólar está ${cotacao}
   `);
+
     setDolar("");
     setTaxa("");
     setSelectedValue("");
@@ -76,7 +75,6 @@ const AppProvider = ({ children }) => {
         setDataAtual,
         tempo,
         cotacao,
-        fetchData,
       }}
     >
       {children}

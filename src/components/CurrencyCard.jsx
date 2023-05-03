@@ -8,6 +8,7 @@ import {
   Converter,
 } from "../styles";
 import { useGlobalContext } from "../context";
+import { Link } from "react-router-dom";
 
 function CurrencyCard() {
   const {
@@ -21,7 +22,7 @@ function CurrencyCard() {
     setSelectedValue,
     handleOptionChange,
     handleConvertClick,
-    arr,
+    cotacao,
   } = useGlobalContext();
 
   return (
@@ -64,7 +65,10 @@ function CurrencyCard() {
           onChange={handleOptionChange}
         ></InputOption1>
         <Label>Cartão</Label>
-        <Converter onClick={handleConvertClick}>⇄ Converter</Converter>
+
+        <Link to="/convert">
+          <Converter onClick={handleConvertClick}>⇄ Converter</Converter>
+        </Link>
       </OptionWrapper>
     </div>
   );
